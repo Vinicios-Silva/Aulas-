@@ -1,0 +1,9 @@
+package TestesdasAulas;
+
+public class Técnicos extends Funcionários {
+
+    public double calculaPericulosidade() { return getSalario() * 0.3; }
+
+    public double salarioFinal() { return calculaSalario() + calculaPericulosidade(); }
+
+}

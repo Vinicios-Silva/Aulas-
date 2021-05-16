@@ -1,0 +1,92 @@
+package TestesdasAulas;
+
+import java.util.Scanner;
+
+public class Pagamento {
+
+    public static void main(String[] args) {
+
+        System.out.println("Entre com o salário do Bilheteiro");
+        Scanner entradaSalario = new Scanner(System.in);
+        Funcionários bilheteiros = new Bilheteiros();
+        bilheteiros.setSalario(entradaSalario.nextInt());
+        System.out.println(String.format("Salário sem desconto: %.2f", bilheteiros.getSalario()));
+        bilheteiros.Va();
+        System.out.println(String.format("Valor do desconto do VT: %.2f", bilheteiros.getCalculaDescontovt()));
+        System.out.println(String.format("Salário com desconto do VT: %.2f", bilheteiros.calculaSalario()));
+        System.out.println(String.format("Valor da comissão: %.2f", bilheteiros.calculaComissao()));
+        System.out.println(String.format("Valor do salário final: %.2f ", bilheteiros.salarioFinal()));
+        bilheteiros.Anos();
+        Scanner entradaAnos = new Scanner(System.in);
+        bilheteiros.setPontuacao(entradaAnos.nextInt());
+        if (bilheteiros.getPontuacao() <=5) {
+            System.out.println(String.format("Valor do PLR: %.2f", bilheteiros.getPlr() * 0.8));
+        }
+            else if (bilheteiros.getPontuacao() >5 && bilheteiros.getPontuacao() <=8){
+            System.out.println(String.format("Valor do PLR: %.2f", bilheteiros.getPlr() * 0.9));
+        }
+            else if (bilheteiros.getPontuacao() ==9 || bilheteiros.getPontuacao()==10) {
+            System.out.println(String.format("Valor do PLR: %.2f", bilheteiros.getPlr() * 1.4));
+        }
+            else if (bilheteiros.getPontuacao() >10) {
+            System.out.println(String.format("Valor do PLR: %.2f", bilheteiros.getPlr() * 2));
+        }
+        System.out.println("\n");
+
+        System.out.println("Entre com o salário do Técnico");
+        Scanner entrSalarioTec = new Scanner(System.in);
+        Técnicos técnicos = new Técnicos();
+        técnicos.setSalario(entrSalarioTec.nextInt());
+        System.out.println(String.format("Salário sem desconto: %.2f", técnicos.getSalario()));
+        técnicos.Va();
+        System.out.println(String.format("Valor do desconto do VT: %.2f", técnicos.getCalculaDescontovt()));
+        System.out.println(String.format("Salário com desconto do VT: %.2f", técnicos.calculaSalario()));
+        System.out.println(String.format("Valor da periculosidade: %.2f", técnicos.calculaPericulosidade()));
+        System.out.println(String.format("Valor do salário final: %.2f", técnicos.salarioFinal()));
+        técnicos.Anos();
+        Scanner entradaAnosTec = new Scanner(System.in);
+        técnicos.setPontuacao(entradaAnosTec.nextInt());
+        if (técnicos.getPontuacao() <=5) {
+            System.out.println(String.format("Valor do PLR: %.2f", técnicos.getPlr() * 0.8));
+        }
+        else if (técnicos.getPontuacao() >5 && técnicos.getPontuacao() <=8){
+            System.out.println(String.format("Valor do PLR: %.2f", técnicos.getPlr() * 0.9));
+        }
+        else if (técnicos.getPontuacao() ==9 || técnicos.getPontuacao()==10) {
+            System.out.println(String.format("Valor do PLR: %.2f", técnicos.getPlr() * 1.4));
+        }
+        else if (técnicos.getPontuacao() >10) {
+            System.out.println(String.format("Valor do PLR: %.2f", técnicos.getPlr() * 2));
+        }
+        System.out.println("\n");
+
+        System.out.println("Entre com o salário de Engenheiro");
+        Scanner entrSalarioEng = new Scanner(System.in);
+        Engenheiros engenheiros = new Engenheiros();
+        engenheiros.setSalario(entrSalarioEng.nextInt());
+        System.out.println(String.format("Salário sem desconto: %.2f", engenheiros.getSalario()));
+        engenheiros.Va();
+        System.out.println(String.format("Valor do desconto do VT: %.2f", engenheiros.getCalculaDescontovt()));
+        System.out.println(String.format("Salário com desconto do VT: %.2f", engenheiros.calculaSalario()));
+        System.out.println(String.format("Valor das horas não trabalhadas: %.2f", engenheiros.calculaHorario()));
+        System.out.println(String.format("Valor do salário final: %.2f", engenheiros.salarioFinal()));
+        engenheiros.Anos();
+        Scanner entradaAnosEng = new Scanner(System.in);
+        engenheiros.setPontuacao(entradaAnosEng.nextInt());
+        if (engenheiros.getPontuacao() <=5) {
+            System.out.println(String.format("Valor do PLR: %.2f", engenheiros.getPlr() * 0.8));
+        }
+        else if (engenheiros.getPontuacao() >5 && engenheiros.getPontuacao() <=8){
+            System.out.println(String.format("Valor do PLR: %.2f", engenheiros.getPlr() * 0.9));
+        }
+        else if (engenheiros.getPontuacao() ==9 || engenheiros.getPontuacao()==10) {
+            System.out.println(String.format("Valor do PLR: %.2f", engenheiros.getPlr() * 1.4));
+        }
+        else if (engenheiros.getPontuacao() >10) {
+            System.out.println(String.format("Valor do PLR: %.2f", engenheiros.getPlr() * 2));
+        }
+        System.out.println("\n");
+
+
+    }
+}

@@ -1,0 +1,10 @@
+package TestesdasAulas;
+
+public class Bilheteiros extends Funcionários{
+
+    public double calculaComissao() {return getSalario() * 0.05; }
+
+    public double salarioFinal() { return calculaSalario() + calculaComissao(); }
+
+
+}

@@ -1,0 +1,32 @@
+package TestesdasAulas;
+
+public class Funcionários {
+
+    public double salario;
+    private double descontovt = 0.06;
+    public double Plr;
+    private double calculaDescontovt;
+    public double pontuacao;
+
+    public void setSalario(double salario) { this.salario = salario; }
+    public double getSalario() { return salario; }
+
+    public void Va() { System.out.println("Valor do VA = 750,00"); }
+
+    public double getCalculaDescontovt() { return this.salario * descontovt; }
+
+    public double calculaSalario() { return this.salario - getCalculaDescontovt(); }
+
+    public double calculaComissao() {return this.salario * 1; }
+
+    public double salarioFinal() { return this.salarioFinal();}
+
+    public double getPlr() { return Plr = 3500; }
+    public void setPlr(double plr) { Plr = plr; }
+
+    public void Anos() { System.out.println("Entre com a qntdd de anos de casa!"); }
+
+    public double getPontuacao() { return pontuacao; }
+    public void setPontuacao(double pontuacao) {this.pontuacao = pontuacao; }
+
+}
